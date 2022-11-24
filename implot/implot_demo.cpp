@@ -2167,7 +2167,7 @@ void ShowDemoWindow(bool* p_open) {
     }
     ImGui::SetNextWindowPos(ImVec2(50, 50), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowSize(ImVec2(600, 750), ImGuiCond_FirstUseEver);
-    ImGui::Begin("ImPlot Demo", p_open, ImGuiWindowFlags_MenuBar);
+    ImGui::Begin("Dataview", p_open, ImGuiWindowFlags_MenuBar);
     if (ImGui::BeginMenuBar()) {
         if (ImGui::BeginMenu("Tools")) {
             ImGui::MenuItem("Metrics",      NULL, &show_implot_metrics);
@@ -2181,7 +2181,7 @@ void ShowDemoWindow(bool* p_open) {
         ImGui::EndMenuBar();
     }
     //-------------------------------------------------------------------------
-    ImGui::Text("ImPlot says hello. (%s)", IMPLOT_VERSION);
+    // ImGui::Text("ImPlot says hello. (%s)", IMPLOT_VERSION);
     // display warning about 16-bit indices
     static bool showWarning = sizeof(ImDrawIdx)*8 == 16 && (ImGui::GetIO().BackendFlags & ImGuiBackendFlags_RendererHasVtxOffset) == false;
     if (showWarning) {

@@ -143,6 +143,7 @@ namespace CustomUI {
             ImGui::Text(Form("ROOT file path: %s.",gROOTFileName.c_str()));
             if (gROOTTreeList.size() == 0) gROOTTreeList = TraverseROOTFile(gROOTFileName, gROOTFilePath);
         }
+        ImPlot::ShowDemoWindow();
         ImGui::End();
 
         if (file_dialog_opened) {

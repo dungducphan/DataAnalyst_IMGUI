@@ -51,11 +51,9 @@ static int g_MinImageCount = 2;
 static bool g_SwapChainRebuild = false;
 
 static void check_vk_result(VkResult err) {
-    if (err == 0)
-        return;
+    if (err == 0) return;
     fprintf(stderr, "[vulkan] Error: VkResult = %d\n", err);
-    if (err < 0)
-        abort();
+    if (err < 0) abort();
 }
 
 #ifdef IMGUI_VULKAN_DEBUG_REPORT
